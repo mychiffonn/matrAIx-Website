@@ -177,12 +177,7 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">01</span> &nbsp;PROBLEM</div>
       <h2>Agents ship faster than we can <span class="hl">evaluate</span> them.</h2>
-      <ul class="points">
-        <li>Agents act across <strong>millions of real contexts</strong>.</li>
-        <li>Teams test a handful of happy paths.</li>
-        <li>Failures hit <strong>real users</strong> — and regulators.</li>
-        <li>Red-teaming and static benchmarks don't scale.</li>
-      </ul>
+      <p class="lead">Autonomous agents act across millions of real-world contexts. Teams test a few happy paths — and failures reach real users and regulators.</p>
     </div>
   </section>
 
@@ -190,8 +185,8 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
   <section class="slide">
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">02</span> &nbsp;SOLUTION</div>
-      <h2>Simulate the population. <span class="hl">Score every behavior.</span></h2>
-      <p class="lead">Populations of AI agent personas run your app. Every interaction is captured and scored.</p>
+      <h2>We simulate users and <span class="hl">score every behavior.</span></h2>
+      <p class="lead">Populations of AI agent personas run your product across 1,000 dimensions.</p>
       <div class="stats3">
         <div><b>1,000</b><span>persona dimensions</span></div>
         <div><b>8,300,000,000</b><span>scored behaviors</span></div>
@@ -200,119 +195,22 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
     </div>
   </section>
 
-  <!-- 3 · HOW IT WORKS -->
+  <!-- 3 · WHAT YOU GET -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">03</span> &nbsp;HOW IT WORKS</div>
-      <h2>Three stages, fully instrumented.</h2>
-      <div class="cols c3">
-        <div class="card"><div class="k">→ 01</div><h3>Spawn</h3><p>Draw agents from a 1,000-dimension space.</p></div>
-        <div class="card"><div class="k">→ 02</div><h3>Simulate</h3><p>Run your real &amp; adversarial flows. Capture every step.</p></div>
-        <div class="card"><div class="k">→ 03</div><h3>Score</h3><p>Grade each behavior. Surface failures &amp; training signal.</p></div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">03</span> &nbsp;WHAT YOU GET</div>
+      <h2>Two products from <span class="hl">one engine.</span></h2>
+      <div class="cols c2">
+        <div class="card"><div class="k">01</div><h3>Evaluation reports</h3><p>Segmented A/B verdicts by persona — the friction aggregate metrics hide.</p></div>
+        <div class="card"><div class="k">02</div><h3>Training data</h3><p>Persona-tagged SFT trajectories &amp; RL preference pairs for post-training.</p></div>
       </div>
-    </div>
-  </section>
-
-  <!-- 4 · PERSONA ENGINE -->
-  <section class="slide">
-    <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">04</span> &nbsp;PERSONA ENGINE</div>
-      <h2>A <span class="hl">1,000-dimension</span> map of your users.</h2>
-      <p class="lead">Every agent is one point in the space — a value on each dimension.</p>
-      <div class="chips">
-        <span class="chip">Demographics</span><span class="chip">Language</span><span class="chip">Domain expertise</span>
-        <span class="chip">Skills &amp; tools</span><span class="chip">Attitudes</span><span class="chip">Cognition</span>
-        <span class="chip">Accessibility</span><span class="chip">Intent &amp; trust</span>
-      </div>
-      <div class="stats3">
-        <div><b>1,012</b><span>live dimensions</span></div>
-        <div><b>9.2 × 10⁶⁸³</b><span>reachable personas</span></div>
-        <div><b>29</b><span>dimension families</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5 · PRODUCT -->
-  <section class="slide">
-    <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">05</span> &nbsp;PRODUCT</div>
-      <h2>matrAIx OS — a live evaluation portal.</h2>
-      <div class="split">
-        <ul class="points">
-          <li>Point the swarm at <strong>any app or website</strong>.</li>
-          <li>Watch <strong>600+ agents</strong> run your flows live.</li>
-          <li>Stream <strong>trajectory telemetry</strong> per step.</li>
-          <li>Reports &amp; training data, instantly.</li>
-        </ul>
-        <div class="panel">
-          <div class="codeblock"><span class="k">[14:02:51]</span> AGENT#0421
-  obs:<span class="s">"enter payment"</span>
-  → <span class="s">confirm</span>  r=<span class="nu">0.84</span>
-  ⮑ <span class="s">PASS</span> score=<span class="nu">0.81</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6 · A/B REPORTS -->
-  <section class="slide">
-    <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">06</span> &nbsp;OUTPUT · EVALUATION</div>
-      <h2>Segmented reports you can't get elsewhere.</h2>
-      <p class="lead">A verdict per persona segment — and the friction behind it.</p>
-      <table class="t">
-        <thead><tr><th>Persona segment</th><th>A</th><th>B</th><th>Δ</th></tr></thead>
-        <tbody>
-          <tr><td class="n">New users</td><td>71%</td><td class="y">88%</td><td class="mx">+17</td></tr>
-          <tr><td class="n">Mobile · low-bandwidth</td><td>52%</td><td class="y">79%</td><td class="mx">+27</td></tr>
-          <tr><td class="n">Non-native English</td><td>63%</td><td class="y">81%</td><td class="mx">+18</td></tr>
-          <tr><td class="n">Age 55+ (passkey)</td><td class="y">70%</td><td>61%</td><td style="color:var(--rose)">−9</td></tr>
-        </tbody>
-      </table>
-      <p class="note">Aggregate "+14.2%" hides a segment that <em>regresses</em>. We catch it.</p>
-    </div>
-  </section>
-
-  <!-- 7 · TRAINING DATA -->
-  <section class="slide">
-    <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">07</span> &nbsp;OUTPUT · TRAINING DATA</div>
-      <h2>Every run becomes <span class="hl">training data.</span></h2>
-      <div class="split">
-        <ul class="points">
-          <li>Structured, rubric-scored traces.</li>
-          <li>SFT trajectories + RL preference pairs.</li>
-          <li>Persona-tagged. Streaming JSONL.</li>
-        </ul>
-        <div class="panel">
-          <div class="codeblock">{
-  <span class="k">"chosen"</span>:  <span class="nu">0.93</span>,
-  <span class="k">"rejected"</span>:<span class="nu">0.21</span>,
-  <span class="k">"margin"</span>:  <span class="nu">0.72</span>
-}</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8 · WHY NOW -->
-  <section class="slide">
-    <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">08</span> &nbsp;WHY NOW</div>
-      <h2>The eval bottleneck is here.</h2>
-      <ul class="points">
-        <li>Every product is adding agents.</li>
-        <li>Post-training is starved for <strong>diverse data</strong>.</li>
-        <li>Safety &amp; regulation make eval mandatory.</li>
-        <li>Models are finally good enough to <strong>simulate users</strong>.</li>
-      </ul>
     </div>
   </section>
 
   <!-- 9 · MARKET -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">09</span> &nbsp;MARKET</div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">04</span> &nbsp;MARKET</div>
       <h2>Three converging budgets.</h2>
       <div class="tam-wrap">
         <div class="tam">
@@ -329,7 +227,7 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
   <!-- 10 · BUSINESS MODEL -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">10</span> &nbsp;BUSINESS MODEL</div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">05</span> &nbsp;BUSINESS MODEL</div>
       <h2>One engine, three revenue lines.</h2>
       <div class="cols c3">
         <div class="card"><div class="k">01</div><h3>Eval-as-a-Service</h3><p>Run evaluations on your apps, agents &amp; models.<span class="price">From $2.5K / mo</span></p></div>
@@ -342,7 +240,7 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
   <!-- 11 · TRACTION -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">11</span> &nbsp;TRACTION</div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">06</span> &nbsp;TRACTION</div>
       <h2>Early signal.</h2>
       <div class="stats3">
         <div><b>6</b><span>design partners</span></div>
@@ -361,7 +259,7 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
   <!-- 12 · COMPETITION -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">12</span> &nbsp;WHY WE WIN</div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">07</span> &nbsp;WHY WE WIN</div>
       <h2>Population-scale. Dual-output. Reproducible.</h2>
       <table class="t">
         <thead><tr><th>Approach</th><th>Persona breadth</th><th>Training data</th><th>Scale</th></tr></thead>
@@ -378,14 +276,14 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
   <!-- 13 · TEAM -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">13</span> &nbsp;TEAM</div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">08</span> &nbsp;TEAM</div>
       <h2>Two co-founders.</h2>
       <div class="team-grid">
         <div class="founder">
           <div class="photo"><img src="Assets/Look_Yuexing_Hao.jpg" alt="Yuexing Hao" /></div>
           <h3>Yuexing Hao</h3>
           <div class="role">Co-founder &amp; CEO</div>
-          <div class="cred">Cornell · MIT Ph.D. ’26</div>
+          <div class="cred">MIT PostDoc</div>
           <div class="logos">
             <span class="lg"><img src="Assets/logos/logo-microsoft.svg" alt="Microsoft" /></span>
             <span class="lg"><img src="Assets/logos/logo-mit.svg" alt="MIT" /></span>
@@ -411,7 +309,7 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
   <!-- 14 · ADVISOR -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">14</span> &nbsp;ADVISOR</div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">09</span> &nbsp;ADVISOR</div>
       <h2>Advisor.</h2>
       <div class="advisor">
         <div class="photo"><img src="Assets/SethMuriphHeadshot.webp" alt="Seth Muriph" /></div>
@@ -431,7 +329,7 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
   <!-- 15 · USE OF FUNDS -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">15</span> &nbsp;USE OF FUNDS</div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">10</span> &nbsp;USE OF FUNDS</div>
       <h2>Use of funds — <span class="hl">$5M seed</span>.</h2>
       <div class="fund">
         <div class="fund-row">
@@ -458,7 +356,7 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
   <!-- 16 · ASK -->
   <section class="slide">
     <div class="inner cover">
-      <div class="eyebrow" style="justify-content:center"><span class="tick">//</span> <span class="n">16</span> &nbsp;THE ASK</div>
+      <div class="eyebrow" style="justify-content:center"><span class="tick">//</span> <span class="n">11</span> &nbsp;THE ASK</div>
       <h1>Evaluate agents <span class="hl">before</span> the world does.</h1>
       <p class="lead" style="margin:22px auto 0;text-align:center">Raising <strong>$5M seed</strong> to scale the portal, expand to 1,000 dimensions, and convert design partners.</p>
       <div class="meta" style="margin-top:38px"><span>Request a demo →</span><span><b>info@matraix.ai</b></span><span>matraix.ai</span></div>
