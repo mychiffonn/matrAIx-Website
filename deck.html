@@ -121,6 +121,18 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
 .contrib-logos{justify-content:center;gap:7px}
 .contrib-logos .lg{height:23px;background:rgba(84,246,166,.06);border:1px solid var(--line-soft)}
 .contrib-logos .lg.txt{color:var(--ink);font-weight:600;font-size:.62rem}
+.affil{color:var(--ink-dim);font-size:.8rem;margin-top:8px}
+.advisor-mini{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:26px}
+.advisor-mini .am-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim)}
+.am-card{display:flex;align-items:center;gap:12px;border:1px solid var(--line-soft);background:var(--bg-2);padding:7px 16px 7px 7px;border-radius:100px}
+.am-photo{width:46px;height:46px;border-radius:50%;overflow:hidden;border:1px solid var(--phos);box-shadow:0 0 14px rgba(84,246,166,.2);flex:0 0 auto}
+.am-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.am-card b{font-family:var(--disp);font-weight:700;font-size:1rem;color:var(--ink)}
+.am-card span{color:var(--ink-dim);font-size:.82rem}
+.qs{list-style:none;display:flex;flex-direction:column;gap:18px;margin-top:10px;max-width:840px}
+.qs li{font-family:var(--disp);font-weight:600;font-size:clamp(1.3rem,2.9vw,2.1rem);color:var(--ink-dim);line-height:1.15;padding-left:32px;position:relative;letter-spacing:-.01em}
+.qs li::before{content:"?";position:absolute;left:0;color:var(--phos);font-weight:800;text-shadow:var(--glow)}
+.qs li strong{color:var(--ink);font-weight:700}
 .advisor{display:flex;gap:28px;align-items:center;max-width:660px;margin:34px auto 0;border:1px solid var(--line);background:var(--bg-2);padding:28px}
 .advisor .photo{width:124px;height:124px;margin:0}
 .advisor .info{text-align:left}
@@ -182,7 +194,11 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">01</span> &nbsp;PROBLEM</div>
       <h2>Agents ship faster than we can <span class="hl">evaluate</span> them.</h2>
-      <p class="lead">Autonomous agents act across millions of real-world contexts. Teams test a few happy paths — and failures reach real users and regulators.</p>
+      <ul class="qs">
+        <li>Is your agent <strong>safe for every kind of user</strong>?</li>
+        <li>Does it hold up in the <strong>long tail you never test</strong>?</li>
+        <li>Will it <strong>break in front of customers</strong> — or regulators?</li>
+      </ul>
     </div>
   </section>
 
@@ -278,34 +294,32 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
     </div>
   </section>
 
-  <!-- 13 · TEAM -->
+  <!-- 8 · TEAM & ADVISOR -->
   <section class="slide">
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">08</span> &nbsp;TEAM</div>
-      <h2>Two co-founders.</h2>
+      <h2>Team.</h2>
       <div class="team-grid">
         <div class="founder">
           <div class="photo"><img src="Assets/Look_Yuexing_Hao.jpg" alt="Yuexing Hao" /></div>
           <h3>Yuexing Hao</h3>
           <div class="role">Co-founder &amp; CEO</div>
           <div class="cred">MIT PostDoc</div>
-          <div class="logos">
-            <span class="lg"><img src="Assets/logos/logo-microsoft.svg" alt="Microsoft" /></span>
-            <span class="lg"><img src="Assets/logos/logo-mit.svg" alt="MIT" /></span>
-            <span class="lg txt">Google</span>
-            <span class="lg txt">Scale</span>
-          </div>
+          <div class="affil">Microsoft · MIT · Google · Scale</div>
         </div>
         <div class="founder">
           <div class="photo" role="img" aria-label="Xiaomin Li" style="background:#0a0e0c url('Assets/Xiaomin_Li.jpg') 50% 20% / 175% no-repeat"></div>
           <h3>Xiaomin Li</h3>
           <div class="role">Co-founder &amp; CTO</div>
           <div class="cred">Harvard Ph.D. ’25</div>
-          <div class="logos">
-            <span class="lg"><img src="Assets/logos/logo-microsoft.svg" alt="Microsoft" /></span>
-            <span class="lg"><img src="Assets/logos/logo-harvard.svg" alt="Harvard" /></span>
-            <span class="lg txt">ByteDance</span>
-          </div>
+          <div class="affil">Microsoft · Harvard · ByteDance</div>
+        </div>
+      </div>
+      <div class="advisor-mini">
+        <span class="am-label">Advisor</span>
+        <div class="am-card">
+          <div class="am-photo"><img src="Assets/SethMuriphHeadshot.webp" alt="Seth Muriph" /></div>
+          <div><b>Seth Muriph</b> <span>· MIT SM &amp; SB · Kenwood Ventures</span></div>
         </div>
       </div>
       <div class="contrib">
@@ -320,30 +334,10 @@ table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim
     </div>
   </section>
 
-  <!-- 14 · ADVISOR -->
-  <section class="slide">
-    <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">09</span> &nbsp;ADVISOR</div>
-      <h2>Advisor.</h2>
-      <div class="advisor">
-        <div class="photo"><img src="Assets/SethMuriphHeadshot.webp" alt="Seth Muriph" /></div>
-        <div class="info">
-          <h3>Seth Muriph</h3>
-          <div class="role">Advisor · Kenwood Ventures</div>
-          <div class="cred">MIT SM &amp; SB</div>
-          <div class="logos">
-            <span class="lg"><img src="Assets/logos/logo-mit.svg" alt="MIT" /></span>
-            <span class="lg txt">Kenwood Ventures</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- 10 · ASK -->
   <section class="slide">
     <div class="inner cover">
-      <div class="eyebrow" style="justify-content:center"><span class="tick">//</span> <span class="n">10</span> &nbsp;THE ASK</div>
+      <div class="eyebrow" style="justify-content:center"><span class="tick">//</span> <span class="n">09</span> &nbsp;THE ASK</div>
       <h1>Continuous product optimization<br>through <span class="hl">simulation</span>.</h1>
       <p class="lead" style="margin:22px auto 0;text-align:center">Raising <strong>$5M seed</strong> to scale the portal, expand to 1,000 dimensions, and convert design partners.</p>
       <div class="meta" style="margin-top:38px"><span>Request a demo →</span><span><b>info@matraix.ai</b></span><span>matraix.ai</span></div>
