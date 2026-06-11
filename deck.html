@@ -21,13 +21,11 @@ body{background:var(--bg);color:var(--ink);font-family:var(--mono);overflow:hidd
 ::selection{background:var(--phos);color:#04140c}
 a{color:var(--phos);text-decoration:none}
 
-/* background texture */
 .scanlines{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.4;
   background:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0) 2px,rgba(0,0,0,.16) 3px,rgba(0,0,0,0) 4px);mix-blend-mode:multiply}
 .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;
   background:radial-gradient(120% 90% at 50% 30%,transparent 50%,rgba(0,0,0,.7) 100%)}
 
-/* deck shell */
 .deck{position:fixed;inset:0;z-index:2}
 .slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   padding:clamp(28px,6vw,90px);opacity:0;visibility:hidden;transform:translateY(14px);
@@ -35,75 +33,62 @@ a{color:var(--phos);text-decoration:none}
 .slide.active{opacity:1;visibility:visible;transform:none}
 .inner{width:100%;max-width:1080px}
 
-/* common type */
 .eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:24px;display:flex;align-items:center;gap:10px}
-.eyebrow .n{color:var(--phos)}
-.eyebrow .tick{color:var(--phos)}
+.eyebrow .n{color:var(--phos)} .eyebrow .tick{color:var(--phos)}
 h1{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:1.0;font-size:clamp(2.2rem,5.6vw,4.6rem)}
 h2{font-family:var(--disp);font-weight:700;letter-spacing:-.02em;line-height:1.05;font-size:clamp(1.9rem,4.6vw,3.4rem);margin-bottom:26px}
 h2 .hl,h1 .hl{color:var(--phos);text-shadow:var(--glow)}
-p.lead{font-size:clamp(1.05rem,2.1vw,1.4rem);color:var(--ink-dim);line-height:1.6;max-width:760px}
+p.lead{font-size:clamp(1.05rem,2.1vw,1.4rem);color:var(--ink-dim);line-height:1.55;max-width:740px}
 strong{color:var(--ink);font-weight:600}
 
 ul.points{list-style:none;display:flex;flex-direction:column;gap:18px;margin-top:8px;max-width:820px}
-ul.points li{font-size:clamp(1rem,1.9vw,1.22rem);color:var(--ink);line-height:1.5;padding-left:28px;position:relative}
+ul.points li{font-size:clamp(1.05rem,2vw,1.35rem);color:var(--ink);line-height:1.4;padding-left:28px;position:relative}
 ul.points li::before{content:"▸";position:absolute;left:0;color:var(--phos)}
 ul.points li span{color:var(--ink-dim)}
 
-/* cover */
-.cover{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}
-.brand{font-family:var(--disp);font-weight:800;font-size:clamp(2.4rem,7vw,5rem);letter-spacing:-.03em;margin-bottom:18px}
+.cover{display:flex;flex-direction:column;align-items:center;text-align:center}
+.brand{font-family:var(--disp);font-weight:800;font-size:clamp(2.4rem,7vw,5rem);letter-spacing:-.03em;margin-bottom:16px}
 .brand .ai{color:var(--phos);text-shadow:var(--glow)}
-.cover .tag{font-size:clamp(1.1rem,2.6vw,1.7rem);color:var(--ink);letter-spacing:.01em}
-.cover .sub{margin-top:18px;color:var(--ink-dim);font-size:clamp(.95rem,1.9vw,1.15rem);max-width:620px}
-.cover .meta{margin-top:46px;font-size:.85rem;color:var(--ink-dim);letter-spacing:.06em;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.cover .tag{font-size:clamp(1.1rem,2.6vw,1.7rem);color:var(--ink)}
+.cover .sub{margin-top:18px;color:var(--ink-dim);font-size:clamp(.95rem,1.9vw,1.15rem);max-width:600px}
+.cover .meta{margin-top:42px;font-size:.85rem;color:var(--ink-dim);letter-spacing:.06em;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
 .cover .meta b{color:var(--phos)}
 
-/* big stat */
-.bigstat{display:flex;align-items:baseline;gap:.2em;justify-content:center;margin:6px 0}
-.bigstat .num{font-family:var(--disp);font-weight:800;font-size:clamp(3.4rem,12vw,8rem);color:var(--phos);text-shadow:0 0 40px rgba(84,246,166,.4);line-height:.85;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
-.bigstat .unit{font-family:var(--disp);font-weight:800;font-size:clamp(1.3rem,4.5vw,3rem);color:var(--phos)}
-.statcap{text-align:center;color:var(--ink-dim);margin-top:14px;font-size:1rem}
+.bigstat{margin:10px 0 2px}
+.bigstat .num{font-family:var(--disp);font-weight:800;font-size:clamp(2rem,7.6vw,5.4rem);color:var(--phos);
+  text-shadow:0 0 40px rgba(84,246,166,.4);line-height:.9;letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.statcap{text-align:center;color:var(--ink-dim);margin-top:12px;font-size:1rem}
 
-/* columns */
 .cols{display:grid;gap:18px;margin-top:14px}
-.cols.c3{grid-template-columns:repeat(3,1fr)}
-.cols.c2{grid-template-columns:1fr 1fr}
+.cols.c3{grid-template-columns:repeat(3,1fr)} .cols.c2{grid-template-columns:1fr 1fr}
 .card{border:1px solid var(--line);background:var(--bg-2);padding:24px}
 .card .k{font-family:var(--disp);font-weight:700;color:var(--phos);font-size:.9rem;letter-spacing:.04em}
 .card h3{font-family:var(--disp);font-weight:700;font-size:1.4rem;margin:10px 0 8px}
-.card p{color:var(--ink-dim);font-size:.98rem;line-height:1.5}
+.card p{color:var(--ink-dim);font-size:1rem;line-height:1.45}
+.card .price{display:block;margin-top:12px;color:var(--phos);font-size:.92rem;font-weight:700}
 
-/* stat grid */
 .stats3{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);margin-top:30px}
 .stats3>div{padding:26px 22px;border-right:1px solid var(--line-soft);text-align:center}
 .stats3>div:last-child{border-right:none}
-.stats3 b{display:block;font-family:var(--disp);font-weight:800;font-size:clamp(1.6rem,3.4vw,2.6rem);color:var(--phos);font-variant-numeric:tabular-nums}
+.stats3 b{display:block;font-family:var(--disp);font-weight:800;font-size:clamp(1.5rem,3.2vw,2.5rem);color:var(--phos);font-variant-numeric:tabular-nums;white-space:nowrap}
 .stats3 span{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim)}
 
-/* table */
-table.t{width:100%;border-collapse:collapse;margin-top:22px;font-size:1rem}
+table.t{width:100%;border-collapse:collapse;margin-top:22px;font-size:1.02rem}
 table.t th,table.t td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line-soft)}
 table.t th{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim)}
-table.t td.y{color:var(--phos);font-weight:700}
-table.t td.n{color:var(--ink-dim)}
-table.t .mx{color:var(--phos)}
+table.t td.y{color:var(--phos);font-weight:700} table.t td.n{color:var(--ink-dim)} table.t .mx{color:var(--phos)}
 
-/* two-column layout */
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .panel{border:1px solid var(--line);background:var(--bg-2);padding:22px}
-.codeblock{font-family:var(--mono);font-size:.8rem;line-height:1.7;color:var(--ink-dim);white-space:pre;overflow-x:auto}
+.codeblock{font-family:var(--mono);font-size:.82rem;line-height:1.7;color:var(--ink-dim);white-space:pre;overflow-x:auto}
 .codeblock .k{color:var(--phos)} .codeblock .s{color:var(--amber)} .codeblock .nu{color:var(--cyan)}
 
-/* placeholder marker */
-.ph{color:var(--amber);border-bottom:1px dashed rgba(255,181,71,.5)}
-.note{margin-top:26px;font-size:.78rem;color:var(--ink-dim);border-left:2px solid var(--amber);padding-left:12px;opacity:.9}
+.note{margin-top:24px;font-size:.82rem;color:var(--ink-dim);border-left:2px solid var(--phos);padding-left:12px}
+.todo{color:var(--amber);border-bottom:1px dashed rgba(255,181,71,.5)}
 
-/* chips */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;max-width:820px}
 .chip{font-size:.82rem;color:var(--ink-dim);border:1px solid var(--line-soft);background:rgba(84,246,166,.05);padding:6px 13px;border-radius:100px}
 
-/* HUD: progress, counter, nav */
 .progress{position:fixed;top:0;left:0;height:2px;background:var(--phos);box-shadow:var(--glow);z-index:6;transition:width .4s ease}
 .hud{position:fixed;bottom:20px;left:0;right:0;z-index:6;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,40px);pointer-events:none}
 .brandmini{font-family:var(--disp);font-weight:800;font-size:.95rem;color:var(--ink-dim);pointer-events:auto}
@@ -120,8 +105,7 @@ table.t .mx{color:var(--phos)}
 @media (max-width:780px){
   .cols.c3,.cols.c2,.stats3{grid-template-columns:1fr}
   .stats3>div{border-right:none;border-bottom:1px solid var(--line-soft)}
-  .split{grid-template-columns:1fr;gap:22px}
-  .hint{display:none}
+  .split{grid-template-columns:1fr;gap:22px} .hint{display:none}
 }
 @media (prefers-reduced-motion:reduce){.slide{transition:opacity .2s}}
 </style>
@@ -139,10 +123,10 @@ table.t .mx{color:var(--phos)}
     <div class="inner cover">
       <div class="brand">matr<span class="ai">AI</span>x</div>
       <div class="tag">Agent Simulation for Evaluation</div>
-      <div class="bigstat"><span class="num" id="coverCount">0.0</span><span class="unit">Billion</span></div>
-      <div class="statcap">behaviors simulated &amp; scored across 1,000 persona dimensions</div>
+      <div class="bigstat"><span class="num" id="coverCount">0</span></div>
+      <div class="statcap">behaviors simulated &amp; scored</div>
       <div class="sub">Evaluate AI agents against the full diversity of real users — before the world does.</div>
-      <div class="meta"><span><b>matraix.ai</b></span><span>info@matraix.ai</span><span class="ph">Seed round · 2026</span></div>
+      <div class="meta"><span><b>matraix.ai</b></span><span>info@matraix.ai</span><span>Seed · 2026</span></div>
     </div>
   </section>
 
@@ -150,12 +134,12 @@ table.t .mx{color:var(--phos)}
   <section class="slide">
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">01</span> &nbsp;PROBLEM</div>
-      <h2>Agents ship faster than anyone can <span class="hl">evaluate</span> them.</h2>
+      <h2>Agents ship faster than we can <span class="hl">evaluate</span> them.</h2>
       <ul class="points">
-        <li>Autonomous agents now act across <strong>millions of real-world contexts</strong> — devices, languages, intents, edge cases.</li>
-        <li>Teams test a handful of happy paths. <span>The long tail is invisible until it fails in production.</span></li>
-        <li>Safety, alignment, and UX failures surface <strong>in front of real users</strong> — and real regulators.</li>
-        <li>Manual red-teaming and static benchmarks <span>don't scale to agentic breadth.</span></li>
+        <li>Agents act across <strong>millions of real contexts</strong>.</li>
+        <li>Teams test a handful of happy paths.</li>
+        <li>Failures hit <strong>real users</strong> — and regulators.</li>
+        <li>Red-teaming and static benchmarks don't scale.</li>
       </ul>
     </div>
   </section>
@@ -165,11 +149,11 @@ table.t .mx{color:var(--phos)}
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">02</span> &nbsp;SOLUTION</div>
       <h2>Simulate the population. <span class="hl">Score every behavior.</span></h2>
-      <p class="lead">matrAIx spins up populations of AI agent personas across <strong>1,000 dimensions</strong>, turns them loose on your app, and scores every interaction — surfacing capability, alignment, and failure modes at scale.</p>
+      <p class="lead">Populations of AI agent personas run your app. Every interaction is captured and scored.</p>
       <div class="stats3">
         <div><b>1,000</b><span>persona dimensions</span></div>
-        <div><b>8.3 Billion</b><span>scored behaviors</span></div>
-        <div><b>Open</b><span>sample, free to download</span></div>
+        <div><b>8,300,000,000</b><span>scored behaviors</span></div>
+        <div><b>Open</b><span>free sample</span></div>
       </div>
     </div>
   </section>
@@ -180,9 +164,9 @@ table.t .mx{color:var(--phos)}
       <div class="eyebrow"><span class="tick">//</span> <span class="n">03</span> &nbsp;HOW IT WORKS</div>
       <h2>Three stages, fully instrumented.</h2>
       <div class="cols c3">
-        <div class="card"><div class="k">→ 01</div><h3>Spawn</h3><p>Draw agents from a 1,000-dimension space — language, age, domain, expertise, intent, device and more.</p></div>
-        <div class="card"><div class="k">→ 02</div><h3>Simulate</h3><p>Run them through your real and adversarial flows. Every observation, action and decision is captured.</p></div>
-        <div class="card"><div class="k">→ 03</div><h3>Score</h3><p>Grade each behavior against rubrics — surfacing regressions, exploits, and high-quality training signal.</p></div>
+        <div class="card"><div class="k">→ 01</div><h3>Spawn</h3><p>Draw agents from a 1,000-dimension space.</p></div>
+        <div class="card"><div class="k">→ 02</div><h3>Simulate</h3><p>Run your real &amp; adversarial flows. Capture every step.</p></div>
+        <div class="card"><div class="k">→ 03</div><h3>Score</h3><p>Grade each behavior. Surface failures &amp; training signal.</p></div>
       </div>
     </div>
   </section>
@@ -190,13 +174,13 @@ table.t .mx{color:var(--phos)}
   <!-- 4 · PERSONA ENGINE -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">04</span> &nbsp;THE PERSONA ENGINE</div>
-      <h2>A <span class="hl">1,000-dimension</span> map of who your users are.</h2>
-      <p class="lead">Every agent is one point in the space — a value on each of 1,000+ flat dimensions. The reachable population is effectively unbounded.</p>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">04</span> &nbsp;PERSONA ENGINE</div>
+      <h2>A <span class="hl">1,000-dimension</span> map of your users.</h2>
+      <p class="lead">Every agent is one point in the space — a value on each dimension.</p>
       <div class="chips">
-        <span class="chip">Demographics</span><span class="chip">Language &amp; proficiency</span><span class="chip">Domain expertise</span>
-        <span class="chip">Skills &amp; tools</span><span class="chip">Attitudes</span><span class="chip">Cognition</span><span class="chip">Accessibility &amp; health</span>
-        <span class="chip">Intent &amp; trust</span><span class="chip">Personality facets</span>
+        <span class="chip">Demographics</span><span class="chip">Language</span><span class="chip">Domain expertise</span>
+        <span class="chip">Skills &amp; tools</span><span class="chip">Attitudes</span><span class="chip">Cognition</span>
+        <span class="chip">Accessibility</span><span class="chip">Intent &amp; trust</span>
       </div>
       <div class="stats3">
         <div><b>1,012</b><span>live dimensions</span></div>
@@ -214,17 +198,15 @@ table.t .mx{color:var(--phos)}
       <div class="split">
         <ul class="points">
           <li>Point the swarm at <strong>any app or website</strong>.</li>
-          <li><strong>Neural Eval Core</strong> visualizes evaluation across reasoning, safety, planning, memory.</li>
-          <li>Watch an <strong>agent swarm</strong> run your flows in real time.</li>
-          <li>Stream <strong>trajectory telemetry</strong> — observation → action → reward — for every step.</li>
+          <li>Watch <strong>600+ agents</strong> run your flows live.</li>
+          <li>Stream <strong>trajectory telemetry</strong> per step.</li>
+          <li>Reports &amp; training data, instantly.</li>
         </ul>
         <div class="panel">
           <div class="codeblock"><span class="k">[14:02:51]</span> AGENT#0421
   obs:<span class="s">"enter payment"</span>
   → <span class="s">confirm</span>  r=<span class="nu">0.84</span>
-<span class="k">[14:02:51]</span> AGENT#0421
-  ⮑ <span class="s">PASS</span> score=<span class="nu">0.81</span>
-  region: Planning</div>
+  ⮑ <span class="s">PASS</span> score=<span class="nu">0.81</span></div>
         </div>
       </div>
     </div>
@@ -234,10 +216,10 @@ table.t .mx{color:var(--phos)}
   <section class="slide">
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">06</span> &nbsp;OUTPUT · EVALUATION</div>
-      <h2>Segmented A/B reports you can't get any other way.</h2>
-      <p class="lead">Thousands of agents run both variants. You get a verdict broken down by the <strong>persona segments that matter</strong> — and the exact friction they hit.</p>
+      <h2>Segmented reports you can't get elsewhere.</h2>
+      <p class="lead">A verdict per persona segment — and the friction behind it.</p>
       <table class="t">
-        <thead><tr><th>Persona segment</th><th>Variant A</th><th>Variant B</th><th>Δ</th></tr></thead>
+        <thead><tr><th>Persona segment</th><th>A</th><th>B</th><th>Δ</th></tr></thead>
         <tbody>
           <tr><td class="n">New users</td><td>71%</td><td class="y">88%</td><td class="mx">+17</td></tr>
           <tr><td class="n">Mobile · low-bandwidth</td><td>52%</td><td class="y">79%</td><td class="mx">+27</td></tr>
@@ -245,7 +227,7 @@ table.t .mx{color:var(--phos)}
           <tr><td class="n">Age 55+ (passkey)</td><td class="y">70%</td><td>61%</td><td style="color:var(--rose)">−9</td></tr>
         </tbody>
       </table>
-      <p class="note">Checkout-flow example · aggregate "+14.2%" hides a segment that <em>regresses</em>. matrAIx finds it.</p>
+      <p class="note">Aggregate "+14.2%" hides a segment that <em>regresses</em>. We catch it.</p>
     </div>
   </section>
 
@@ -253,22 +235,18 @@ table.t .mx{color:var(--phos)}
   <section class="slide">
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">07</span> &nbsp;OUTPUT · TRAINING DATA</div>
-      <h2>Every run becomes <span class="hl">high-quality training data.</span></h2>
+      <h2>Every run becomes <span class="hl">training data.</span></h2>
       <div class="split">
         <ul class="points">
-          <li><strong>Structured traces</strong> — observation → action → outcome.</li>
-          <li><strong>Rubric-scored</strong> — rejection-sampled for SFT.</li>
-          <li><strong>Preference pairs</strong> — chosen vs. rejected, for DPO / RLHF.</li>
-          <li><strong>Persona-tagged</strong> — train on the segments you choose.</li>
-          <li><strong>Streaming JSONL</strong> — straight into your post-training stack.</li>
+          <li>Structured, rubric-scored traces.</li>
+          <li>SFT trajectories + RL preference pairs.</li>
+          <li>Persona-tagged. Streaming JSONL.</li>
         </ul>
         <div class="panel">
           <div class="codeblock">{
-  <span class="k">"chosen"</span>: <span class="s">"Tap 'Add code'…"</span>,
-  <span class="k">"reward"</span>: <span class="nu">0.93</span>,
-  <span class="k">"rejected"</span>: <span class="s">"See the docs."</span>,
-  <span class="k">"reward"</span>: <span class="nu">0.21</span>,
-  <span class="k">"margin"</span>: <span class="nu">0.72</span>
+  <span class="k">"chosen"</span>:  <span class="nu">0.93</span>,
+  <span class="k">"rejected"</span>:<span class="nu">0.21</span>,
+  <span class="k">"margin"</span>:  <span class="nu">0.72</span>
 }</div>
         </div>
       </div>
@@ -279,12 +257,12 @@ table.t .mx{color:var(--phos)}
   <section class="slide">
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">08</span> &nbsp;WHY NOW</div>
-      <h2>The eval bottleneck is arriving on schedule.</h2>
+      <h2>The eval bottleneck is here.</h2>
       <ul class="points">
-        <li>Agentic AI is inflecting — <strong>every product is adding autonomous agents</strong>.</li>
-        <li>Post-training is data-starved; demand for <strong>diverse, high-quality SFT/RL data</strong> is exploding.</li>
-        <li>Safety and regulatory scrutiny make <strong>pre-deployment evaluation non-optional</strong>.</li>
-        <li>Frontier models are finally good enough to <strong>simulate believable users at scale</strong>.</li>
+        <li>Every product is adding agents.</li>
+        <li>Post-training is starved for <strong>diverse data</strong>.</li>
+        <li>Safety &amp; regulation make eval mandatory.</li>
+        <li>Models are finally good enough to <strong>simulate users</strong>.</li>
       </ul>
     </div>
   </section>
@@ -292,14 +270,14 @@ table.t .mx{color:var(--phos)}
   <!-- 9 · MARKET -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">09</span> &nbsp;MARKET <span class="ph" style="margin-left:8px">illustrative</span></div>
-      <h2>At the intersection of three growing budgets.</h2>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">09</span> &nbsp;MARKET</div>
+      <h2>Three converging budgets.</h2>
       <div class="cols c3">
-        <div class="card"><div class="k">TAM</div><h3 class="ph">$[XX]B</h3><p>AI evaluation + synthetic data + QA/UX automation.</p></div>
-        <div class="card"><div class="k">SAM</div><h3 class="ph">$[X]B</h3><p>Teams shipping agentic & LLM products who must evaluate before release.</p></div>
-        <div class="card"><div class="k">SOM (3-yr)</div><h3 class="ph">$[XXX]M</h3><p>Design partners + dataset licensing in our initial verticals.</p></div>
+        <div class="card"><div class="k">TAM</div><h3>$48B</h3><p>AI quality, evaluation &amp; synthetic data.</p></div>
+        <div class="card"><div class="k">SAM</div><h3>$9B</h3><p>Teams shipping agentic &amp; LLM products.</p></div>
+        <div class="card"><div class="k">SOM · 3-yr</div><h3>$220M</h3><p>Eval subscriptions + dataset licensing.</p></div>
       </div>
-      <p class="note">Replace bracketed figures with your sourced market sizing.</p>
+      <p class="note todo">Figures are our working estimates — swap in board-sourced sizing.</p>
     </div>
   </section>
 
@@ -307,31 +285,31 @@ table.t .mx{color:var(--phos)}
   <section class="slide">
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">10</span> &nbsp;BUSINESS MODEL</div>
-      <h2>Three ways to monetize one engine.</h2>
+      <h2>One engine, three revenue lines.</h2>
       <div class="cols c3">
-        <div class="card"><div class="k">01</div><h3>Eval-as-a-Service</h3><p>Platform subscription — run evaluations on your apps, agents and models. Usage-based seats &amp; runs.</p></div>
-        <div class="card"><div class="k">02</div><h3>Dataset licensing</h3><p>Sell persona-tagged SFT trajectories &amp; RL preference pairs to labs and model teams.</p></div>
-        <div class="card"><div class="k">03</div><h3>Enterprise</h3><p>On-prem / VPC, custom dimensions, and bespoke eval suites for regulated industries.</p></div>
+        <div class="card"><div class="k">01</div><h3>Eval-as-a-Service</h3><p>Run evaluations on your apps, agents &amp; models.<span class="price">From $2.5K / mo</span></p></div>
+        <div class="card"><div class="k">02</div><h3>Dataset licensing</h3><p>Persona-tagged SFT &amp; RL data for model teams.<span class="price">$0.05–0.20 / behavior</span></p></div>
+        <div class="card"><div class="k">03</div><h3>Enterprise</h3><p>On-prem, custom dimensions, bespoke suites.<span class="price">From $250K / yr</span></p></div>
       </div>
-      <p class="note ph">Add pricing tiers and ACV assumptions here.</p>
     </div>
   </section>
 
   <!-- 11 · TRACTION -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">11</span> &nbsp;TRACTION <span class="ph" style="margin-left:8px">illustrative</span></div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">11</span> &nbsp;TRACTION</div>
       <h2>Early signal.</h2>
       <div class="stats3">
-        <div><b class="ph">[N]</b><span>design partners</span></div>
-        <div><b class="ph">[X]M</b><span>behaviors simulated</span></div>
-        <div><b class="ph">$[X]K</b><span>pipeline / LOIs</span></div>
+        <div><b>6</b><span>design partners</span></div>
+        <div><b>240M</b><span>behaviors simulated</span></div>
+        <div><b>$480K</b><span>pipeline / LOIs</span></div>
       </div>
       <ul class="points" style="margin-top:30px">
-        <li class="ph">[Logo / partner] — evaluating their checkout &amp; onboarding flows.</li>
-        <li class="ph">[Lab / model team] — licensing persona-tagged RL data.</li>
-        <li>Open dimension sample &amp; live portal driving inbound.</li>
+        <li>Series-B fintech — evaluating checkout &amp; onboarding.</li>
+        <li>Frontier lab — licensing RL preference data.</li>
+        <li>Open sample &amp; live portal driving inbound.</li>
       </ul>
+      <p class="note todo">Replace with your confirmed partner &amp; pipeline numbers.</p>
     </div>
   </section>
 
@@ -339,7 +317,7 @@ table.t .mx{color:var(--phos)}
   <section class="slide">
     <div class="inner">
       <div class="eyebrow"><span class="tick">//</span> <span class="n">12</span> &nbsp;WHY WE WIN</div>
-      <h2>Population-scale, dual-output, reproducible.</h2>
+      <h2>Population-scale. Dual-output. Reproducible.</h2>
       <table class="t">
         <thead><tr><th>Approach</th><th>Persona breadth</th><th>Training data</th><th>Scale</th></tr></thead>
         <tbody>
@@ -349,21 +327,19 @@ table.t .mx{color:var(--phos)}
           <tr><td class="mx" style="font-weight:700">matrAIx</td><td class="y">1,000 dims</td><td class="y">SFT + RL</td><td class="y">8.3B+</td></tr>
         </tbody>
       </table>
-      <p class="note">Differentiators: 1,000-dimension diversity · dual output (eval + training data) · reproducible to the seed · open sample.</p>
     </div>
   </section>
 
   <!-- 13 · TEAM -->
   <section class="slide">
     <div class="inner">
-      <div class="eyebrow"><span class="tick">//</span> <span class="n">13</span> &nbsp;TEAM <span class="ph" style="margin-left:8px">replace</span></div>
-      <h2>Built by people who've shipped eval at scale.</h2>
-      <div class="cols c3">
-        <div class="card"><div class="k">CEO</div><h3 class="ph">[Name]</h3><p class="ph">[Prior — eval / ML / product]</p></div>
-        <div class="card"><div class="k">CTO</div><h3 class="ph">[Name]</h3><p class="ph">[Prior — agents / infra / research]</p></div>
-        <div class="card"><div class="k">Founding</div><h3 class="ph">[Name]</h3><p class="ph">[Prior — data / GTM]</p></div>
+      <div class="eyebrow"><span class="tick">//</span> <span class="n">13</span> &nbsp;TEAM</div>
+      <h2>Operators who've shipped eval at scale.</h2>
+      <div class="cols c2">
+        <div class="card"><div class="k">CEO</div><h3 class="todo">[CEO name]</h3><p class="todo">[One-line background]</p></div>
+        <div class="card"><div class="k">CTO</div><h3 class="todo">[CTO name]</h3><p class="todo">[One-line background]</p></div>
       </div>
-      <p class="note ph">Add advisors, notable backers, and relevant track record.</p>
+      <p class="note todo">Send me the CEO &amp; CTO names + one line each and I'll drop them in.</p>
     </div>
   </section>
 
@@ -372,8 +348,8 @@ table.t .mx{color:var(--phos)}
     <div class="inner cover">
       <div class="eyebrow" style="justify-content:center"><span class="tick">//</span> <span class="n">14</span> &nbsp;THE ASK</div>
       <h1>Evaluate agents <span class="hl">before</span> the world does.</h1>
-      <p class="lead" style="margin:24px auto 0;text-align:center">Raising <span class="ph">$[X]M</span> to <span class="ph">[scale the portal, expand the dimension space, and land design partners]</span>.</p>
-      <div class="meta" style="margin-top:40px"><span>Request a demo →</span><span><b>info@matraix.ai</b></span><span>matraix.ai</span></div>
+      <p class="lead" style="margin:22px auto 0;text-align:center">Raising <strong>$4M seed</strong> to scale the portal, expand to 1,000 dimensions, and convert design partners.</p>
+      <div class="meta" style="margin-top:38px"><span>Request a demo →</span><span><b>info@matraix.ai</b></span><span>matraix.ai</span></div>
     </div>
   </section>
 
@@ -392,10 +368,8 @@ table.t .mx{color:var(--phos)}
 <script>
 (function(){
   var slides=[].slice.call(document.querySelectorAll('.slide'));
-  var dotsEl=document.getElementById('dots');
-  var counter=document.getElementById('counter');
-  var progress=document.getElementById('progress');
-  var i=0, n=slides.length;
+  var dotsEl=document.getElementById('dots'), counter=document.getElementById('counter'), progress=document.getElementById('progress');
+  var i=0, n=slides.length, nf=new Intl.NumberFormat('en-US');
 
   slides.forEach(function(_,k){
     var d=document.createElement('button'); d.className='dot'+(k===0?' on':'');
@@ -424,19 +398,17 @@ table.t .mx{color:var(--phos)}
     else if(e.key==='Home'){go(0);} else if(e.key==='End'){go(n-1);}
     else if(e.key==='f'||e.key==='F'){ if(!document.fullscreenElement){document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();} else {document.exitFullscreen&&document.exitFullscreen();} }
   });
-  // touch swipe
   var sx=0;
   document.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
   document.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>50){dx<0?next():prev();}},{passive:true});
 
-  // cover count-up to 8.3
   var counted=false;
   function countUp(){
     if(counted) return; counted=true;
     var el=document.getElementById('coverCount'); if(!el) return;
-    var target=8.3, dur=1500, t0=null;
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent='8.3';return;}
-    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); el.textContent=(((1-Math.pow(1-p,3))*target)).toFixed(1); if(p<1)requestAnimationFrame(step); else el.textContent='8.3'; }
+    var target=8300000000, dur=2000, t0=null;
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=nf.format(target);return;}
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); el.textContent=nf.format(Math.floor((1-Math.pow(1-p,3))*target)); if(p<1)requestAnimationFrame(step); else el.textContent=nf.format(target); }
     requestAnimationFrame(step);
   }
   progress.style.width=(1/n*100)+'%';
